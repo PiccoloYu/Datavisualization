@@ -1,0 +1,31 @@
+{
+  "name": "index",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev": "webpack-dev-server",
+    "start": "webpack-dev-server --inline"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "gulp": "^4.0.0",
+    "layui-src": "^2.4.5",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "echarts": "^4.2.1",
+    "expose-loader": "^0.7.5",
+    "jquery": "^3.4.0"
+  },
+  "description": ""
+}

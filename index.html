@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>车间看板</title>
+</head>
+<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+<!--[if lt IE 9]>-->
+<script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+<script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <!--引入动画css-->
+    <link rel="stylesheet" href="../particlesJs/css/style.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <!--引入这个JS-->
+    <script type="text/javascript" src="../layui/layui.js"></script>
+    <!--layui入口文件-->
+    <script type="text/javascript" src="../js/layuiPut.js"></script>
+     <!--layui入口文件-->
+<body >
+<div id="particles-js" ></div><!--particles-js 动画js-->
+    <div class="layui-fluid" id="dad">
+        <div class="layui-row" style="height: 5.5%;">
+            <div class="layui-col-xs4 ">
+                &nbsp;
+            </div>
+            <div class="layui-col-xs4 head">
+                <h1>车间看板</h1>
+            </div>
+            <div class="layui-col-xs4 time">
+                <p  class="layui-icon">&#xe60e;<span id="appdate">
+                </span></p>
+            </div>
+        </div>
+        <div class="layui-row side">
+            <div class="layui-col-xs12 layui-col-sm12 layui-col-md3 chartData">
+                <div class="layui-row border chartdiv" >
+                    <!--负责四角边框-->
+                    <i class="liftbottomR"></i>
+                    <i class="lifttopL"></i>
+                    <i class="lifttopR"></i>
+                    <i class="liftbottomL"></i>
+                    <div id="main2" class="charts" ></div>
+                </div>
+                <div class="layui-row">&nbsp;</div>
+                <div class="layui-row border chartdiv">
+                    <!--负责四角边框-->
+                    <i class="liftbottomR"></i>
+                    <i class="lifttopL"></i>
+                    <i class="lifttopR"></i>
+                    <i class="liftbottomL"></i>
+                    <div id="main3" class="charts"></div>
+                </div>
+                <div class="layui-row">&nbsp;</div>
+                <div class="layui-row border chartdiv">
+                    <!--负责四角边框-->
+                    <i class="liftbottomR"></i>
+                    <i class="lifttopL"></i>
+                    <i class="lifttopR"></i>
+                    <i class="liftbottomL"></i>
+                    <div id="main4" class="charts"></div>
+                </div>
+            </div>
+            <div class="layui-col-xs12 layui-col-sm12 layui-col-md6 chartData border" >
+                <div class="layui-row border" id="middle">
+                    <i class="bottomR"></i>
+                    <i class="topL"></i>
+                    <i class="topR"></i>
+                    <i class="bottomL"></i>
+                    <div class="layui-row tableRow">
+                        <table class="plan"  lay-skin="nob" lay-size="sm">
+                            <tr >
+                                <td rowspan="2"><h1>L1</h1></td>
+                                <td colspan="2"><h6>板型:346f01-P</h6></td>
+                                <td colspan="2">DPPM:450</td>
+                                <td rowspan="2" >
+                                    <p class="pgv"></p>
+                                </td>
+                                <td></td><td></td><td></td>
+                            </tr>
+                            <tr >
+                                <td colspan="2">机型:LED32F1301</td>
+                                <td colspan="2">延迟:03:00:01</td>
+                                <td></td>
+                                <td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><h1>投产</h1></td>
+                                <td colspan="5">
+                                    <div>
+                                        <div class="container">
+                                            <div class="cbar"></div>
+                                    </div>
+                                    </div>
+                                </td>
+                                <td colspan="2" rowspan="2">
+                                    <div  class="fpy">
+                                        <table>
+                                            <tr>
+                                                <td>FPY %</td><td>pcs/hour</td>
+                                            </tr>
+                                            <tr>
+                                                <td>91</td><td>72</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="qty">
+                                        <table>
+                                            <tr>
+                                                <td>Qty of PCBs</td>
+                                            </tr>
+                                            <tr>
+                                                <td>527/500</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="layui-row tableRow">
+                            <table class="plan"  lay-skin="nob" lay-size="sm">
+                                    <tr >
+                                        <td rowspan="2"><h1>L1</h1></td>
+                                        <td colspan="2"><h6>板型:346f01-P</h6></td>
+                                        <td colspan="2">DPPM:450</td>
+                                        <td rowspan="2" >
+                                            <p class="pgv"></p>
+                                        </td>
+                                        <td></td><td></td><td></td>
+                                    </tr>
+                                    <tr >
+                                        <td colspan="2">机型:LED32F1301</td>
+                                        <td colspan="2">延迟:03:00:01</td>
+                                        <td></td>
+                                        <td></td><td></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2"><h1>投产</h1></td>
+                                        <td colspan="5">
+                                            <div class="container">
+                                                <div class="cbar"></div>
+                                            </div>
+                                        </td>
+                                        <td colspan="2" rowspan="2">
+                                            <div  class="fpy">
+                                                <table>
+                                                    <tr>
+                                                        <td>FPY %</td><td>pcs/hour</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>91</td><td>72</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td colspan="2">
+                                            <div class="qty">
+                                                <table>
+                                                    <tr>
+                                                        <td>Qty of PCBs</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>527/500</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                    </div>
+                    <div class="layui-row tableRow">
+                            <table class="plan"  lay-skin="nob" lay-size="sm">
+                                    <tr >
+                                        <td rowspan="2"><h1>L1</h1></td>
+                                        <td colspan="2"><h6>板型:346f01-P</h6></td>
+                                        <td colspan="2">DPPM:450</td>
+                                        <td rowspan="2" >
+                                            <p class="pgv"></p>
+                                        </td>
+                                        <td></td><td></td><td></td>
+                                    </tr>
+                                    <tr >
+                                        <td colspan="2">机型:LED32F1301</td>
+                                        <td colspan="2">延迟:03:00:01</td>
+                                        <td></td>
+                                        <td></td><td></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2"><h1>投产</h1></td>
+                                        <td colspan="5">
+                                            <div class="container">
+                                                <div class="cbar"></div>
+                                            </div>
+                                        </td>
+                                        <td colspan="2" rowspan="2">
+                                            <div  class="fpy">
+                                                <table>
+                                                    <tr>
+                                                        <td>FPY %</td><td>pcs/hour</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>91</td><td>72</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td colspan="2">
+                                            <div class="qty">
+                                                <table>
+                                                    <tr>
+                                                        <td>Qty of PCBs</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>527/500</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                    </div>
+                    <div class="layui-row tableRow">
+                            <table class="plan"  lay-skin="nob" lay-size="sm">
+                                    <tr >
+                                        <td rowspan="2"><h1>L1</h1></td>
+                                        <td colspan="2"><h6>板型:346f01-P</h6></td>
+                                        <td colspan="2">DPPM:450</td>
+                                        <td rowspan="2" >
+                                            <p class="pgv"></p>
+                                        </td>
+                                        <td></td><td></td><td></td>
+                                    </tr>
+                                    <tr >
+                                        <td colspan="2">机型:LED32F1301</td>
+                                        <td colspan="2">延迟:03:00:01</td>
+                                        <td></td>
+                                        <td></td><td></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2"><h1>投产</h1></td>
+                                        <td colspan="5">
+                                            <div class="container">
+                                                <div class="cbar"></div>
+                                            </div>
+                                        </td>
+                                        <td colspan="2" rowspan="2">
+                                            <div  class="fpy">
+                                                <table>
+                                                    <tr>
+                                                        <td>FPY %</td><td>pcs/hour</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>91</td><td>72</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td colspan="2">
+                                            <div class="qty">
+                                                <table>
+                                                    <tr>
+                                                        <td>Qty of PCBs</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>527/500</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                    </div>
+                    <div class="layui-row tableRow">
+                            <table class="plan"  lay-skin="nob" lay-size="sm">
+                                    <tr >
+                                        <td rowspan="2"><h1>L1</h1></td>
+                                        <td colspan="2"><h6>板型:346f01-P</h6></td>
+                                        <td colspan="2">DPPM:450</td>
+                                        <td rowspan="2" >
+                                            <p class="pgv"></p>
+                                        </td>
+                                        <td></td><td></td><td></td>
+                                    </tr>
+                                    <tr >
+                                        <td colspan="2">机型:LED32F1301</td>
+                                        <td colspan="2">延迟:03:00:01</td>
+                                        <td></td>
+                                        <td></td><td></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2"><h1>投产</h1></td>
+                                        <td colspan="5">
+                                            <div class="container">
+                                                <div class="cbar"></div>
+                                            </div>
+                                        </td>
+                                        <td colspan="2" rowspan="2">
+                                            <div  class="fpy">
+                                                <table>
+                                                    <tr>
+                                                        <td>FPY %</td><td>pcs/hour</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>91</td><td>72</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td colspan="2">
+                                            <div class="qty">
+                                                <table>
+                                                    <tr>
+                                                        <td>Qty of PCBs</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>527/500</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                    </div>
+                    <div class="layui-row tableRow">
+                            <table class="plan"  lay-skin="nob" lay-size="sm">
+                                    <tr >
+                                        <td rowspan="2"><h1>L1</h1></td>
+                                        <td colspan="2"><h6>板型:346f01-P</h6></td>
+                                        <td colspan="2">DPPM:450</td>
+                                        <td rowspan="2" >
+                                            <p class="pgv"></p>
+                                        </td>
+                                        <td></td><td></td><td></td>
+                                    </tr>
+                                    <tr >
+                                        <td colspan="2">机型:LED32F1301</td>
+                                        <td colspan="2">延迟:03:00:01</td>
+                                        <td></td>
+                                        <td></td><td></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2"><h1>投产</h1></td>
+                                        <td colspan="5">
+                                            <div class="container">
+                                                <div class="cbar"></div>
+                                            </div>
+                                        </td>
+                                        <td colspan="2" rowspan="2">
+                                            <div  class="fpy">
+                                                <table>
+                                                    <tr>
+                                                        <td>FPY %</td><td>pcs/hour</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>91</td><td>72</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td colspan="2">
+                                            <div class="qty">
+                                                <table>
+                                                    <tr>
+                                                        <td>Qty of PCBs</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>527/500</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                    </div>
+                    <div class="layui-row tableRow">
+                            <table class="plan"  lay-skin="nob" lay-size="sm">
+                                    <tr >
+                                        <td rowspan="2"><h1>L1</h1></td>
+                                        <td colspan="2"><h6>板型:346f01-P</h6></td>
+                                        <td colspan="2">DPPM:450</td>
+                                        <td rowspan="2" >
+                                            <p class="pgv"></p>
+                                        </td>
+                                        <td></td><td></td><td></td>
+                                    </tr>
+                                    <tr >
+                                        <td colspan="2">机型:LED32F1301</td>
+                                        <td colspan="2">延迟:03:00:01</td>
+                                        <td></td>
+                                        <td></td><td></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2"><h1>投产</h1></td>
+                                        <td colspan="5">
+                                            <div class="container">
+                                                <div class="cbar"></div>
+                                            </div>
+                                        </td>
+                                        <td colspan="2" rowspan="2">
+                                            <div  class="fpy">
+                                                <table>
+                                                    <tr>
+                                                        <td>FPY %</td><td>pcs/hour</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>91</td><td>72</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td colspan="2">
+                                            <div class="qty">
+                                                <table>
+                                                    <tr>
+                                                        <td>Qty of PCBs</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>527/500</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-xs12 layui-col-sm12 layui-col-md3 chartData">
+                <div class="layui-row border chartdiv">
+                    <i class="liftbottomR"></i>
+                    <i class="lifttopL"></i>
+                    <i class="lifttopR"></i>
+                    <i class="liftbottomL"></i>
+                    <div class="charts" >
+                        <table id="usertable">
+                            <tr><td colspan="2"><h1>总览</h1></td>
+                            </tr>
+                            <tr>
+                                <td> <span face="verdana"><strong>60000</strong></span><em>pcs</em></td> <td><span face="verdana" ><strong>50000</strong></span><em>pcs</em></td>
+                            </tr>
+                            <tr>
+                                <td>主板计划产量</td> <td> 完成量</td>
+                            </tr>
+                            <tr>
+                                <td><span face="verdana" ><strong>96.67</strong><em>%</em></span></td> <td><span face="verdana"><strong>98.90</strong><em>%</em></span></td>
+                            </tr>
+                            <tr>
+                                <td>总达成率</td> <td>总直通率</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><span face="verdana"><strong>400</strong></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"> 总DPPM</td>
+                            </tr>
+                        </table>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-row">&nbsp;</div>
+                <div class="layui-row border chartdiv">
+                        <i class="liftbottomR"></i>
+                        <i class="lifttopL"></i>
+                        <i class="lifttopR"></i>
+                        <i class="liftbottomL"></i>
+                    <div class="charts" >
+                        <table id="yjtable"  >
+                            <tr>
+                                <th colspan="2" style="text-align: center"><h2>预警信息</h2></th>
+                            </tr>
+                            <tr style="height: 20px">
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 10%" class="column1">1</td>
+                                <td>预警1</td>
+                            </tr>
+                            <tr>
+                                <td class="column1">2</td>
+                                <td>预警2</td>
+                            </tr>
+                            <tr>
+                                <td class="column1">3</td>
+                                <td>预警3</td>
+                            </tr>
+                            <tr>
+                                <td class="column1">4</td>
+                                <td>预警4</td>
+                            </tr>
+                            <tr>
+                                <td class="column1">5</td>
+                                <td>预警5</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="layui-row">&nbsp;</div>
+                <div class="layui-row border chartdiv">
+                    <i class="liftbottomR"></i>
+                    <i class="lifttopL"></i>
+                    <i class="lifttopR"></i>
+                    <i class="liftbottomL"></i>
+                    <div id="main" class="charts" ></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--引入bundle.js-->
+<script src="http://localhost:8082/bundle.js"></script>
+<!--<script src="../build/bundle.js"></script>-->
+<!--动画js-->
+<script src="../particlesJs/js/particles.js" ></script><!--动画库-->
+<script src="../particlesJs/js/app.js" ></script><!--参数配置文件-->
+<script>
+
+</script>
+</body>
+</html>

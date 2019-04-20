@@ -1,0 +1,378 @@
+.border {
+    border: #3A5FCD 1px solid;
+}
+
+.data {
+    height: 100%;
+    padding: 10px;
+    margin: 0 15px;
+}
+
+.test {
+    height: 30.7%;
+}
+
+.column {
+    text-align: right;
+}
+
+.column1 {
+    text-align: center;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+}
+
+#dad {
+    height: 100%;
+    position: relative;
+}
+
+.head {
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    background-image: url('../img/TB1Pg3pPXXXXXcxXpXXXXXXXXXX-1920-1080.gif');
+    background-size: cover;
+    background-position: 100% 45%;
+    background-repeat: no-repeat;
+}
+
+.time {
+    border: 0px solid;
+    text-align: right;
+    top: 50%;
+}
+
+/*中部div*/
+#middle {
+    margin: 0 15px;
+    height: 100%;
+    position: relative;
+    background: rgba(25, 100, 200, 0.2)
+}
+
+.container {
+    height: 40px;
+    margin: 0 5px;
+    border: 0px solid red;
+    overflow: hidden
+}
+
+.cbar {
+    height: 38px;
+    width: 615px;
+    border: 0px solid green;
+    /*background-color: #2b542c;*/
+    background: url('../img/AI人工智能进度条.png') no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden
+
+}
+
+/*边缘部div*/
+.side {
+    height: 93%
+}
+
+.chartData {
+    height: 100%;
+    border: 0px solid red;
+}
+
+.chartdiv {
+    width: 100%;
+    height: 32%;
+    text-align: center;
+    display: flex;
+    /* 使子元素水平居中 */
+    justify-content: center;
+    /* 使子元素垂直居中 */
+    align-items: center;
+    position: relative;
+    background: rgba(25, 100, 200, 0.2)
+}
+
+.charts {
+    height: 283px;
+    margin: 0 auto;
+    border: 0px solid;
+    /*必须设置宽度*/
+    width: 100%;
+    position: absolute;
+    display: flex;
+    /* 使子元素水平居中 */
+    justify-content: center;
+    /* 使子元素垂直居中 */
+    align-items: center;
+}
+
+#usertable {
+    height: 90%;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    background: url("../img/边框1.png") no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+#usertable tr:nth-child(2) td strong {
+    font-size: 30px;
+    color: #1c97fe
+}
+
+#usertable tr:nth-child(4) td strong {
+    font-size: 30px;
+    color: #e7b72f
+}
+
+#usertable tr:nth-child(6) td strong {
+    font-size: 30px;
+    color: #1c97fe
+}
+
+
+#usertable tr td em {
+    color: #638dbf;
+    font-size: 14px
+}
+
+#usertable tr:nth-child(3) td {
+    font-size: 15px
+}
+
+#usertable #img {
+    text-align: center;
+    /*background: url("../img/头像.png") no-repeat;*/
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+#yjtable {
+    margin: auto;
+    color: red;
+    width: 90%;
+    height: 90%;
+    border: 0px solid;
+}
+
+#yjtable tr td {
+    background: rgba(25, 100, 200, 0.2);
+    border: 1px solid #3A5FCD;
+}
+
+.tableRow {
+    height: 14.5%;
+    margin: 0 10px;
+    border: 0px solid;
+    display: flex;
+    /* 使子元素水平居中
+    justify-content: center;*/
+    /* 使子元素垂直居中 */
+    align-items: center;
+}
+
+.tableRow table {
+    width: 100%;
+}
+
+.plan {
+    height: 50%;
+}
+.plan tr:first-child td:first-child{
+    text-align:center;vertical-align:middle;
+}
+.plan tr:first-child td:nth-child(5){
+    width: 5%
+}
+.plan tr:first-child td:nth-child(6){
+    width: 6%
+}
+.plan tr:first-child td:last-child{
+    width: 10%;text-align: right
+}
+.plan tr td {
+    border: 0px solid;
+}
+
+.plan tr:nth-child(3) {
+    height: 100%;
+}
+.plan tr:nth-child(3) td:first-child{
+    text-align:center;vertical-align:middle;width: 80px;
+}
+
+.plan tr:nth-child(3) td:nth-child(2){
+    text-align:center;vertical-align:middle;width: 70%;
+}
+.plan tr:nth-child(3) td h1 {
+    display: flex;
+    /* 使子元素水平居中*/
+    justify-content: center;
+    /* 使子元素垂直居中 */
+    align-items: center;
+    background-color: #2b542c;
+    border-radius: 5px;
+}
+
+.plan tr:nth-child(3) .fpy {
+    display: flex;
+    text-align: center;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #2b542c;
+    font-size: 7px;
+    vertical-align: middle;
+    margin: 0 3px;
+    /*
+    background: url("../img/bg01bigindex.png") no-repeat;
+    background-size:100% 100%;
+    overflow: hidden;
+    */
+}
+
+.qty {
+    display: flex;
+    text-align: center;
+    height: 100%;
+    border-radius: 10px;
+    font-size: 7px;
+    vertical-align: middle;
+    margin: 0 3px;
+    background-color: #0d5ab1;
+}
+
+.plan tr:nth-child(3) div table {
+    height: 100%;
+}
+
+.space {
+    height: 38px;
+}
+
+/*进度条*/
+progress {
+    height: 40px;
+    width: 98%;
+    /*color: white;
+    background:orange;*/
+}
+
+
+/*中间部四周边框*/
+.topL {
+    width: 20px;
+    height: 20px;
+    border-top-width: 2px;
+    border-top-color: #26c6f0;
+    border-top-style: solid;
+    border-left-width: 2px;
+    border-left-color: #26c6f0;
+    border-left-style: solid;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+}
+
+.topR {
+    width: 20px;
+    height: 20px;
+    border-top-width: 2px;
+    border-top-color: #26c6f0;
+    border-top-style: solid;
+    border-right-width: 2px;
+    border-right-color: #26c6f0;
+    border-right-style: solid;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+}
+
+.bottomL {
+    width: 20px;
+    height: 20px;
+    border-bottom-width: 2px;
+    border-bottom-color: #26c6f0;
+    border-bottom-style: solid;
+    border-left-width: 2px;
+    border-left-color: #26c6f0;
+    border-left-style: solid;
+    position: absolute;
+    bottom: -2px;
+    left: -2px;
+}
+
+.bottomR {
+    width: 20px;
+    height: 20px;
+    border-bottom-width: 2px;
+    border-bottom-color: #26c6f0;
+    border-bottom-style: solid;
+    border-right-width: 2px;
+    border-right-color: #26c6f0;
+    border-right-style: solid;
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+}
+
+/*lift部四周边框*/
+.lifttopL {
+    width: 20px;
+    height: 20px;
+    border-top-width: 2px;
+    border-top-color: #26c6f0;
+    border-top-style: solid;
+    border-left-width: 2px;
+    border-left-color: #26c6f0;
+    border-left-style: solid;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+}
+
+.lifttopR {
+    width: 20px;
+    height: 20px;
+    border-top-width: 2px;
+    border-top-color: #26c6f0;
+    border-top-style: solid;
+    border-right-width: 2px;
+    border-right-color: #26c6f0;
+    border-right-style: solid;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+}
+
+.liftbottomL {
+    width: 20px;
+    height: 20px;
+    border-bottom-width: 2px;
+    border-bottom-color: #26c6f0;
+    border-bottom-style: solid;
+    border-left-width: 2px;
+    border-left-color: #26c6f0;
+    border-left-style: solid;
+    position: absolute;
+    bottom: -2px;
+    left: -2px;
+}
+
+.liftbottomR {
+    width: 20px;
+    height: 20px;
+    border-bottom-width: 2px;
+    border-bottom-color: #26c6f0;
+    border-bottom-style: solid;
+    border-right-width: 2px;
+    border-right-color: #26c6f0;
+    border-right-style: solid;
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+}
